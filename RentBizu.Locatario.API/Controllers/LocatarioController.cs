@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RentBizu.Application.LocatarioContext.LocatarioApp.Dto;
 using RentBizu.Application.LocatarioContext.LocatarioApp.Handler.Command;
 using RentBizu.Application.LocatarioContext.LocatarioApp.Handler.Query;
+using System.Net;
 
 namespace LetsMusic.Api.Controllers
 {
@@ -18,6 +19,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(LocatarioOutputDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> ListarUm([FromRoute] Guid id)
         {
             var resut = await _mediator.Send(new GetLocatarioQuery(id));
@@ -25,6 +27,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(LocatarioOutputDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> ListarTodos()
         {
             var resut = await _mediator.Send(new GetAllLocatarioQuery());
@@ -32,6 +35,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(LocatarioOutputDto), (int)HttpStatusCode.Created)]
         public async Task<IActionResult> Criar(LocatarioInputDto dto)
         {
             var result = await _mediator.Send(new CreateLocatarioCommand(dto));
@@ -39,6 +43,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
         public async Task<IActionResult> Excluir([FromRoute] Guid id)
         {
             var result = await _mediator.Send(new DeleteLocatarioCommand(id));
@@ -46,6 +51,8 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(LocatarioOutputDto), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
         public async Task<IActionResult> Atualizar([FromRoute] Guid id, LocatarioInputDto dto)
         {
             //var resutGet = await _mediator.Send(new GetLocatarioQuery(id));

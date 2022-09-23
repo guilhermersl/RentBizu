@@ -4,6 +4,7 @@ using RentBizu.Application.LocadorContext.PlanoContaApp.Handler.Query;
 using RentBizu.Application.LocadorContext.LocadorApp.Dto;
 using RentBizu.Application.LocadorContext.LocadorApp.Handler.Command;
 using RentBizu.Application.LocadorContext.LocadorApp.Handler.Query;
+using System.Net;
 
 namespace LetsMusic.Api.Controllers
 {
@@ -19,6 +20,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(LocadorOutputDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> ListarUm([FromRoute] Guid id)
         {
             var resut = await _mediator.Send(new GetLocadorQuery(id));
@@ -26,6 +28,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(IList<LocadorOutputDto>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> ListarTodos()
         {
             var resut = await _mediator.Send(new GetAllLocadorQuery());
@@ -33,6 +36,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(LocadorOutputDto), (int)HttpStatusCode.Created)]
         public async Task<IActionResult> Criar(LocadorInputDto dto)
         {
             var result = await _mediator.Send(new CreateLocadorCommand(dto));
@@ -40,6 +44,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
         public async Task<IActionResult> Excluir([FromRoute] Guid id)
         {
             var result = await _mediator.Send(new DeleteLocadorCommand(id));
@@ -47,6 +52,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(LocadorOutputDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> Atualizar([FromRoute] Guid id, LocadorInputDto dto)
         {
             //var resutGet = await _mediator.Send(new GetLocadorQuery(id));

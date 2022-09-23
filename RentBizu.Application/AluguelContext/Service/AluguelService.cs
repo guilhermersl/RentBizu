@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using RentBizu.Application.AluguelContext.PlanoContaApp.Dto;
+using RentBizu.Application.AluguelContext.Dto;
 using RentBizu.Application.AluguelContext.Service;
 using RentBizu.Domain.AluguelContext;
 using RentBizu.Domain.AluguelContext.Repositories;
-using RentBizu.Domain.LocadorContext;
-using RentBizu.Domain.LocadorContext.Repositories;
 
 namespace RentBizu.Application.AlbumContext.Service
 {

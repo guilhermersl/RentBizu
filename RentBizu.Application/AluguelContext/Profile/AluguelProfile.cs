@@ -1,7 +1,5 @@
-﻿using RentBizu.Application.AluguelContext.PlanoContaApp.Dto;
-using RentBizu.Application.LocadorContext.PlanoContaApp.Dto;
+﻿using RentBizu.Application.AluguelContext.Dto;
 using RentBizu.Domain.AluguelContext;
-using RentBizu.Domain.LocadorContext;
 
 namespace RentBizu.Application.AluguelContext.Profile
 {

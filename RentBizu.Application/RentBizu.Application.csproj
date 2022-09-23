@@ -18,8 +18,4 @@
     <ProjectReference Include="..\RentBizu.Domain\RentBizu.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="AluguelContext\Handler\" />
-  </ItemGroup>
-
 </Project>

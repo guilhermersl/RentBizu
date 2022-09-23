@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentBizu.Locador.API", "Ren
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentBizu.Locatario.API", "RentBizu.Locatario.API\RentBizu.Locatario.API.csproj", "{0FB0D37B-5959-49F3-8075-117EB1D6D4A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentBizu.Aluguel.API", "RentBizu.Aluguel.API\RentBizu.Aluguel.API.csproj", "{D17A6735-AC12-4ADD-9727-A1B371E9D3B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{0FB0D37B-5959-49F3-8075-117EB1D6D4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB0D37B-5959-49F3-8075-117EB1D6D4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB0D37B-5959-49F3-8075-117EB1D6D4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17A6735-AC12-4ADD-9727-A1B371E9D3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17A6735-AC12-4ADD-9727-A1B371E9D3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17A6735-AC12-4ADD-9727-A1B371E9D3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17A6735-AC12-4ADD-9727-A1B371E9D3B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{0A50052C-E877-4B87-93A4-AF57E9E5DA6A} = {D93BD7CA-5613-4016-8867-93F26F9E0864}
 		{5D401192-F371-468D-B16F-956BDB4529E2} = {4BCF362C-02A0-435F-ACCB-5BD8DF93A6D6}
 		{0FB0D37B-5959-49F3-8075-117EB1D6D4A5} = {4BCF362C-02A0-435F-ACCB-5BD8DF93A6D6}
+		{D17A6735-AC12-4ADD-9727-A1B371E9D3B5} = {4BCF362C-02A0-435F-ACCB-5BD8DF93A6D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03AE56E6-A368-4CBE-82E6-DD8859BD19E4}

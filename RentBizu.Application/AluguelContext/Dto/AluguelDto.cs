@@ -1,6 +1,6 @@
 ﻿using RentBizu.CrossCutting.Enum;
 
-namespace RentBizu.Application.AluguelContext.PlanoContaApp.Dto
+namespace RentBizu.Application.AluguelContext.Dto
 {
     public record AluguelInputDto(
     );

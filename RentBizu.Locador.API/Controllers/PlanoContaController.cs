@@ -5,6 +5,7 @@ using RentBizu.Application.LocadorContext.PlanoContaApp.Dto;
 using RentBizu.Application.LocadorContext.PlanoContaApp.Handler.Command;
 using RentBizu.Application.LocadorContext.PlanoContaApp.Handler.Query;
 using RentBizu.Application.LocadorContext.LocadorApp.Handler.Query;
+using System.Net;
 
 namespace LetsMusic.Api.Controllers
 {
@@ -20,6 +21,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpGet("{locadorId}/{id}")]
+        [ProducesResponseType(typeof(PlanoContaOutputDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> ListarUm([FromRoute] Guid locadorId, [FromRoute] Guid id)
         {
             var resut = await _mediator.Send(new GetPlanoContaQuery(locadorId, id));
@@ -27,6 +29,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpGet("{locadorId}")]
+        [ProducesResponseType(typeof(PlanoContaOutputDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> ListarTodos([FromRoute] Guid locadorId)
         {
             var locador = await _mediator.Send(new GetLocadorQuery(locadorId));
@@ -43,6 +46,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpPost("{locadorId}")]
+        [ProducesResponseType(typeof(PlanoContaOutputDto), (int)HttpStatusCode.Created)]
         public async Task<IActionResult> Criar([FromRoute] Guid locadorId, PlanoContaInputDto dto)
         {
             var locador = await _mediator.Send(new GetLocadorQuery(locadorId));
@@ -59,6 +63,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpDelete("{locadorId}/{id}")]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
         public async Task<IActionResult> Excluir([FromRoute] Guid locadorId, [FromRoute] Guid id)
         {
             var locador = await _mediator.Send(new GetLocadorQuery(locadorId));
@@ -75,6 +80,7 @@ namespace LetsMusic.Api.Controllers
         }
 
         [HttpPut("{locadorId}/{id}")]
+        [ProducesResponseType(typeof(PlanoContaOutputDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> Atualizar([FromRoute] Guid locadorId, [FromRoute] Guid id, PlanoContaInputDto dto)
         {
             var locador = await _mediator.Send(new GetLocadorQuery(locadorId));
