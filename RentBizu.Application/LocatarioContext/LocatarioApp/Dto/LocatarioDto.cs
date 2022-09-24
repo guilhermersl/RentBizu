@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentBizu.Application.AluguelContext.Dto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace RentBizu.Application.LocatarioContext.LocatarioApp.Dto
         string Nome,
         string Cpf,
         string Email,
-        string Telefone
-        //List<PlanoContaOutputDto> PlanoContas
+        string Telefone,
+        IList<AluguelOutputDto> Alugueis
     );
 }

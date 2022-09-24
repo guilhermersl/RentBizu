@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RentBizu.Data.Contexto;
 
@@ -11,9 +12,10 @@ using RentBizu.Data.Contexto;
 namespace RentBizu.Data.Migrations
 {
     [DbContext(typeof(RentBizuContext))]
-    partial class RentBizuContextModelSnapshot : ModelSnapshot
+    [Migration("20220924013925_novo")]
+    partial class novo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

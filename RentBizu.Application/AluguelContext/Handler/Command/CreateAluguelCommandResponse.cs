@@ -7,9 +7,9 @@ namespace RentBizu.Application.AluguelContext.Handler.Command
     {
         public AluguelOutputDto Aluguel { get; set; }
 
-        public CreateAluguelCommandResponse(AluguelOutputDto Aluguel)
+        public CreateAluguelCommandResponse(AluguelOutputDto aluguel)
         {
-            Aluguel = Aluguel;
+            Aluguel = aluguel;
         }
     }
 }

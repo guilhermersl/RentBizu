@@ -21,6 +21,7 @@ namespace RentBizu.Application.AlbumContext.Service
         {
             var aluguel = _mapper.Map<Aluguel>(dto);
             aluguel.LocatarioId = locatarioId;
+            aluguel.PlanoContaId = planoContaId;
             await _aluguelRepository.Save(aluguel);
 
             return _mapper.Map<AluguelOutputDto>(aluguel);

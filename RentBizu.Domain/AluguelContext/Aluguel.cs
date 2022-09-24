@@ -6,6 +6,11 @@ namespace RentBizu.Domain.AluguelContext
 {
     public class Aluguel : Entity<Guid>
     {
+        public Aluguel()
+        {
+            Data = DateTime.Now;
+        }
+
         public DateTime Data { get; set; }
 
         [ForeignKey("PlanoConta")]
@@ -13,6 +18,7 @@ namespace RentBizu.Domain.AluguelContext
 
         [ForeignKey("Locatario")]
         public Guid LocatarioId { get; set; }
+        public string Descricao { get; set; }
 
     }
 }

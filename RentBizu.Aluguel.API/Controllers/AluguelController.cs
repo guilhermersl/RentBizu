@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using RentBizu.Application.AluguelContext.Handler.Query;
 using RentBizu.Application.AluguelContext.Dto;
 using RentBizu.Application.AluguelContext.Handler.Command;
-using RentBizu.Application.AluguelContext.Handler.Query;
 using System.Net;
-using RentBizu.Application.AluguelContext.Dto;
 
-namespace LetsMusic.Api.Controllers
+namespace RentBizu.Aluguel.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

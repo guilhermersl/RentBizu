@@ -6,6 +6,7 @@ using RentBizu.Application.AluguelContext.Service;
 using RentBizu.Application.LocadorContext.LocadorApp.Service;
 using RentBizu.Application.LocadorContext.Service;
 using RentBizu.Application.LocatarioContext.LocatarioApp.Service;
+using RentBizu.Data;
 
 namespace RentBizu.Application.Config
 {
@@ -20,6 +21,8 @@ namespace RentBizu.Application.Config
             services.AddScoped<IPlanoContaService, PlanoContaService>();
             services.AddScoped<ILocatarioService, LocatarioService>();
             services.AddScoped<IAluguelService, AluguelService>();
+            services.AddHttpClient();
+            services.AddScoped<IAzureBlobStorage, AzureBlobStorage>();
 
             return services;
         }
